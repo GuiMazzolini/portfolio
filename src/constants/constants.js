@@ -1,0 +1,55 @@
+export const projects = [
+  {
+    title: 'Apple Clone Landing page',
+    description: "This project recreates the sleek design of Apple's website using React for a responsive interface, Tailwind CSS for efficient styling, and GSAP for smooth animations. This project showcases how modern front-end technologies can be combined to build a visually appealing and interactive landing page.",
+      image: '/images/apple.png',
+      tags: ['React', 'GSAP', 'Tailwind'],
+    visit: 'https://github.com/GuiMazzolini/Apple-clone',
+    source: 'https://appleclone3d.netlify.app',
+    id: 0,
+  },
+  {
+    title: 'Brainwave Landing page',
+    description:" Brainwave  project is a dynamic web interface built with React and JavaScript, featuring a visually captivating parallax effect. This project demonstrates the effective use of modern web technologies to craft an engaging and interactive landing page that leaves a strong visual impact.",
+    image: '/images/brainwave.png',
+    tags: ['React', 'JavaScript', 'Tailwind'],
+    visit: 'https://github.com/GuiMazzolini/Brainwave-website',
+    source: 'https://site-brainwave.netlify.app',
+    id: 1,
+  },
+  {
+    title: 'Vegan Mealplan',
+    description: "The Vegan Meal Plan project is a full-stack web app that helps users create and manage personalized vegan meal plans. It uses React and JavaScript for the front end, Node.js with MongoDB for the back end, and Cloudinary for image management, offering a seamless and interactive experience.",
+      image: '/images/VMP.png',
+      tags: ['React', 'Node', "Bootstrap", "MongoDB", "Cloudinary"],
+    visit: 'https://github.com/GuiMazzolini/finalproject-client',
+    visit2: 'https://github.com/GuiMazzolini/finalproject-server',
+    // source: 'https://google.com',
+    id: 2,
+  },
+  {
+    title: 'Iron Library',
+    description: "For my second project at the Ironhack Bootcamp, I developed Iron Library, a web application built using JavaScript and Handlebars. This platform allows students to upload their projects, creating a collaborative library of resources.",
+      image: '/images/ironLibrary.png',
+      tags: ['Node', "Handlebars", "MongoDB"],
+    visit: 'https://github.com/GuiMazzolini/project-two',
+    // source: 'https://google.com',
+    id: 3,
+  },
+  {
+    title: 'Developer Run',
+    description: "Developer Run is a Mario-style game I built as my first Bootcamp project using JavaScript and Canvas. Players must navigate through 3 levels to complete the game.",
+      image: '/images/developerRun.png',
+      tags: ['Javascript', "Canvas"],
+    visit: 'https://github.com/GuiMazzolini/game-project',
+    source: 'https://guimazzolini.github.io/game-project/',
+    id: 4,
+  },
+];
+
+export const TimeLineData = [
+  { year: 2022, text: 'Started my journey at IronHack on the Full-Stack Web Development Program', },
+  { year: "05/2023", text: 'Completed the "Frontend Developer Career Path" at Scrimba and started working as a freelance developer', },
+  { year: "11/2023", text: 'I collaborated on two projects within a multidisciplinary group as part of the TechLabs - Digital Shaper Program in Web Development', },
+  { year: 2024, text: 'Completed the "Typescript: Complete Developers Guide at Udemy"', },
+];
