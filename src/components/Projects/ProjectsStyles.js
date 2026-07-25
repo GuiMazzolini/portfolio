@@ -1,113 +1,258 @@
 import styled from 'styled-components';
 
-export const Img = styled.img`
-  width:100%;
-  height:100%;
-  object-fit: cover;
-  overflow: hidden;
-`
-
-export const GridContainer = styled.section`
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-padding: 3rem;
-place-items: center;
-column-gap: 2rem;
-row-gap: 3rem;
-@media ${(props) => props.theme.breakpoints.sm} {
+export const ProjectsList = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 2rem;
-  padding-bottom: 0;
-}
+  gap: 6.4rem;
+  padding: 3.2rem 0 2.4rem;
+  width: 100%;
 
-`
-export const BlogCard = styled.div`
-  border-radius: 10px;
-  box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
-  text-align: center;
-  width: 400px;
+  @media ${(props) => props.theme.breakpoints.md} {
+    gap: 4.8rem;
+    padding: 2.4rem 0 1.6rem;
+  }
+
   @media ${(props) => props.theme.breakpoints.sm} {
-    width: 100%;
+    gap: 4rem;
+    padding: 1.6rem 0 1.2rem;
   }
 `;
-export const TitleContent = styled.div`
-  text-align: center;
-  z-index: 20;
+
+export const ProjectRow = styled.article`
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  direction: ${(props) => (props.$reverse ? 'rtl' : 'ltr')};
+
+  & > * {
+    direction: ltr;
+  }
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    direction: ltr;
+  }
+`;
+
+export const Media = styled.a`
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  background: ${(props) => props.theme.colors.background2};
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: border-color 0.3s ease, transform 0.35s ease;
+
+  &:hover {
+    border-color: rgba(42, 157, 143, 0.45);
+    transform: translateY(-2px);
+  }
+
+  &:hover img {
+    transform: scale(1.03);
+  }
+`;
+
+export const MediaStatic = styled.div`
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  background: ${(props) => props.theme.colors.background2};
+  border: 1px solid rgba(255, 255, 255, 0.06);
+`;
+
+export const Img = styled.img`
+  display: block;
   width: 100%;
-
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.5s ease;
 `;
 
-
-export const HeaderThree = styled.h3`
-  font-weight: 500;
-  letter-spacing: 2px;
-  color: #9cc9e3;
-  padding: .5rem 0;
-  font-size: ${(props) => props.title ? '3rem' : '2rem'};
-`;
-
-export const Hr = styled.hr`
-  width: 50px;
-  height: 3px;
-  margin: 20px auto;
-  border: 0;
-  background: #d0bb57;
-`;
-
-export const Intro = styled.div`
-  width: 170px;
-  margin: 0 auto;
-  color: #dce3e7;
-  font-family: 'Droid Serif', serif;
-  font-size: 13px;
-  font-style: italic;
-  line-height: 18px;
-`;
-
-
-export const CardInfo = styled.p`
-  width: 100%;
-  padding: 0 50px;
-  color: #e4e6e7;
-  font-style: 2rem;
-  line-height: 24px;
-  text-align: justify;
-  margin-bottom: 10px;
-  @media ${(props) => props.theme.breakpoints.sm} {
-    padding:.3rem
-  
-}
-`;
-
-
-export const UtilityList = styled.ul`
-  list-style-type: none;
-  padding: 0;
+export const Content = styled.div`
   display: flex;
-  justify-content: space-around;
-  margin: 2.5rem 0;
+  flex-direction: column;
+  gap: 1.2rem;
 `;
 
-export const ExternalLinks = styled.a`
-color: #fff;
-font-size: 1.6rem;
-padding:1rem 1.5rem;
-background: linear-gradient(270deg, #13ADC7 0%, #945DD6 100%);
-opacity: 0.8;
-border-radius: 15px;
-transition: 0.5s;
-&:hover{
-  opacity: 1;
-}
+export const Label = styled.span`
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: ${(props) => props.theme.colors.accent1};
+`;
+
+export const Title = styled.h3`
+  font-size: 3.2rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #fff;
+  line-height: 1.15;
+  margin: 0;
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    font-size: 2.8rem;
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: 2.4rem;
+  }
+`;
+
+export const Description = styled.p`
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.65);
+  max-width: 42rem;
+  margin: 0;
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: 1.6rem;
+  }
 `;
 
 export const TagList = styled.ul`
-display: flex;
-justify-content: space-around;
-padding: 2rem;
-`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1.6rem;
+  list-style: none;
+  padding: 0.4rem 0 0;
+  margin: 0;
+`;
+
 export const Tag = styled.li`
-color: #d8bfbf;
-font-size: 1.5rem;
-`
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 1.4rem;
+  letter-spacing: 0.02em;
+`;
+
+export const Links = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.6rem 2.4rem;
+  margin-top: 0.8rem;
+`;
+
+export const PrimaryLink = styled.a`
+  display: inline-flex;
+  align-items: center;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 1rem 1.8rem;
+  background: linear-gradient(270deg, #2a9d8f 0%, #1b6ca8 100%);
+  border-radius: 8px;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+
+  &:hover {
+    opacity: 0.95;
+    transform: translateY(-1px);
+  }
+`;
+
+export const SecondaryLink = styled.a`
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-bottom: 2px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  transition: color 0.25s ease, border-color 0.25s ease;
+
+  &:hover {
+    color: #fff;
+    border-color: ${(props) => props.theme.colors.accent1};
+  }
+`;
+
+export const Status = styled.span`
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 1.4rem;
+  font-style: italic;
+`;
+
+export const MotionStrip = styled.aside`
+  margin-top: 1.6rem;
+  padding-top: 3.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 4.8rem;
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    padding-top: 2.4rem;
+    margin-bottom: 3.2rem;
+  }
+`;
+
+export const MotionHeader = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+`;
+
+export const MotionTitle = styled.h4`
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #fff;
+`;
+
+export const MotionIntro = styled.p`
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.45);
+  max-width: 48rem;
+`;
+
+export const MotionList = styled.ul`
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem 2.4rem;
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+`;
+
+export const MotionItem = styled.li``;
+
+export const MotionLink = styled.a`
+  display: inline-flex;
+  align-items: baseline;
+  gap: 1rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.6rem;
+  font-weight: 500;
+  transition: color 0.25s ease;
+
+  &:hover {
+    color: #fff;
+  }
+
+  &:hover span:first-child {
+    border-color: ${(props) => props.theme.colors.accent1};
+  }
+`;
+
+export const MotionName = styled.span`
+  padding-bottom: 2px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+  transition: border-color 0.25s ease;
+`;
+
+export const MotionNote = styled.span`
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.35);
+`;

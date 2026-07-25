@@ -2,26 +2,30 @@ import React from 'react';
 
 import { Section, SectionText, SectionTitle } from '../../styles/GlobalComponents';
 import Button from '../../styles/GlobalComponents/Button';
-import { LeftSection } from './HeroStyles';
-
+import { CtaGroup, Eyebrow, LeftSection, SecondaryLink } from './HeroStyles';
 
 const Hero = () => (
-  <>
-    <Section row nopadding>
-      <LeftSection>
-        <SectionTitle main center>
-          Welcome To <br />
-          My Personal Portfolio
-        </SectionTitle>
-        <SectionText>
-        My portfolio showcases my journey as a full-stack dev, highlighting the skills and projects that demonstrate my ability to create innovative and efficient solutions across the entire tech stack.
-        </SectionText>
-        <a href="/cv.pdf" download="GuilhermeMuniz.pdf">
-          <Button>Download CV</Button>
+  <Section row nopadding>
+    <LeftSection>
+      <Eyebrow>Full-stack developer · Berlin</Eyebrow>
+      <SectionTitle main center>
+        Guilherme Mazzolini
+      </SectionTitle>
+      <SectionText>
+        I build clean, responsive web apps — from polished landing pages
+        to full-stack products. Background in Environmental Engineering,
+        now focused on shipping practical solutions for real users.
+      </SectionText>
+      <CtaGroup>
+        <a href="/cv.pdf" download="GuilhermeMazzolini.pdf">
+          <Button form>Download CV</Button>
         </a>
-      </LeftSection>
-    </Section>
-  </>
+        <SecondaryLink href="#contact">
+          Get in touch
+        </SecondaryLink>
+      </CtaGroup>
+    </LeftSection>
+  </Section>
 );
 
 export default Hero;

@@ -1,36 +1,55 @@
 import React from 'react';
-import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 
 import { SocialIcons } from '../Header/HeaderStyles';
-import { CompanyContainer, FooterWrapper, LinkColumn, LinkItem, LinkList, LinkTitle, Slogan, SocialContainer, SocialIconsContainer } from './FooterStyles';
+import {
+  CompanyContainer,
+  FooterWrapper,
+  LinkColumn,
+  LinkItem,
+  LinkList,
+  LinkTitle,
+  Slogan,
+  SocialContainer,
+  SocialIconsContainer,
+} from './FooterStyles';
 
 const Footer = () => {
   return (
-    <FooterWrapper>
+    <FooterWrapper id="contact">
       <LinkList>
-        <LinkColumn>
-          <LinkTitle>Call</LinkTitle>
-          <LinkItem href="tel:1744005625">(+49) 174 4005625</LinkItem>
-        </LinkColumn>
         <LinkColumn>
           <LinkTitle>Email</LinkTitle>
           <LinkItem href="mailto:guilhermemazzolini@hotmail.com">
             guilhermemazzolini@hotmail.com
           </LinkItem>
         </LinkColumn>
+        <LinkColumn>
+          <LinkTitle>Social</LinkTitle>
+          <SocialContainer>
+            <SocialIcons
+              href="https://github.com/GuiMazzolini"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <AiFillGithub size="3rem" />
+            </SocialIcons>
+            <SocialIcons
+              href="https://www.linkedin.com/in/guilhermemazzolini/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <AiFillLinkedin size="3rem" />
+            </SocialIcons>
+          </SocialContainer>
+        </LinkColumn>
       </LinkList>
       <SocialIconsContainer>
         <CompanyContainer>
-          <Slogan>Innovating one project at a time</Slogan>
+          <Slogan>Building useful web products, one project at a time.</Slogan>
         </CompanyContainer>
-        <SocialContainer>
-          <SocialIcons href="https://github.com/GuiMazzolini" target="_blanck">
-            <AiFillGithub size="3rem" />
-          </SocialIcons>
-          <SocialIcons href="https://www.linkedin.com/in/guilhermemazzolini/" target="_blanck">
-            <AiFillLinkedin size="3rem" />
-          </SocialIcons>
-        </SocialContainer>
       </SocialIconsContainer>
     </FooterWrapper>
   );

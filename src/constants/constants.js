@@ -1,55 +1,67 @@
 export const projects = [
   {
-    title: 'Apple Clone Landing page',
-    description: "This project recreates the sleek design of Apple's website using React for a responsive interface, Tailwind CSS for efficient styling, and GSAP for smooth animations. This project showcases how modern front-end technologies can be combined to build a visually appealing and interactive landing page.",
-      image: '/images/apple.png',
-      tags: ['React', 'GSAP', 'Tailwind'],
-    visit: 'https://github.com/GuiMazzolini/Apple-clone',
-    source: 'https://appleclone3d.netlify.app',
+    title: 'Sanches & Muniz',
+    label: 'Client',
+    description:
+      'Website for a São Paulo law firm — practice areas, team story, and clear CTAs for consultations and WhatsApp, designed to feel trustworthy and convert visitors.',
+    image: '/images/lawyers.png',
+    tags: ['Next.js', 'React', 'Responsive'],
+    live: 'https://sanchesemuniz.com/',
     id: 0,
   },
   {
-    title: 'Brainwave Landing page',
-    description:" Brainwave  project is a dynamic web interface built with React and JavaScript, featuring a visually captivating parallax effect. This project demonstrates the effective use of modern web technologies to craft an engaging and interactive landing page that leaves a strong visual impact.",
-    image: '/images/brainwave.png',
-    tags: ['React', 'JavaScript', 'Tailwind'],
-    visit: 'https://github.com/GuiMazzolini/Brainwave-website',
-    source: 'https://site-brainwave.netlify.app',
+    title: 'Rafael Hennig',
+    label: 'Client',
+    description:
+      'Portfolio for a Berlin-based photographer and cinematographer — gallery-first layout with about and contact, waiting on a custom domain.',
+    image: '/images/photographer.png',
+    tags: ['Next.js', 'React', 'Vercel'],
+    live: 'https://rafael-hennig.vercel.app/',
     id: 1,
   },
   {
-    title: 'Vegan Mealplan',
-    description: "The Vegan Meal Plan project is a full-stack web app that helps users create and manage personalized vegan meal plans. It uses React and JavaScript for the front end, Node.js with MongoDB for the back end, and Cloudinary for image management, offering a seamless and interactive experience.",
-      image: '/images/VMP.png',
-      tags: ['React', 'Node', "Bootstrap", "MongoDB", "Cloudinary"],
-    visit: 'https://github.com/GuiMazzolini/finalproject-client',
-    visit2: 'https://github.com/GuiMazzolini/finalproject-server',
-    // source: 'https://google.com',
+    title: 'MealPlan',
+    label: 'Personal',
+    description:
+      'Community kitchen app to share recipes, plan the week, and build shopping lists — React front end with a Node back end.',
+    image: '/images/mealplan.png',
+    tags: ['React', 'Node', 'MongoDB'],
+    live: 'https://plan-project.netlify.app/',
     id: 2,
   },
   {
-    title: 'Iron Library',
-    description: "For my second project at the Ironhack Bootcamp, I developed Iron Library, a web application built using JavaScript and Handlebars. This platform allows students to upload their projects, creating a collaborative library of resources.",
-      image: '/images/ironLibrary.png',
-      tags: ['Node', "Handlebars", "MongoDB"],
-    visit: 'https://github.com/GuiMazzolini/project-two',
-    // source: 'https://google.com',
+    title: 'StyleShop',
+    label: 'Personal',
+    description:
+      'E-commerce training store with catalog, cart, Stripe checkout, and GitHub/Google OAuth — still getting a final polish pass.',
+    image: '/images/ecommerce.png',
+    tags: ['Next.js', 'Stripe', 'OAuth'],
     id: 3,
   },
+];
+
+export const motionExperiments = [
   {
-    title: 'Developer Run',
-    description: "Developer Run is a Mario-style game I built as my first Bootcamp project using JavaScript and Canvas. Players must navigate through 3 levels to complete the game.",
-      image: '/images/developerRun.png',
-      tags: ['Javascript', "Canvas"],
-    visit: 'https://github.com/GuiMazzolini/game-project',
-    source: 'https://guimazzolini.github.io/game-project/',
-    id: 4,
+    title: 'Apple iPhone',
+    note: 'GSAP · 3D scroll',
+    live: 'https://appleclone3d.netlify.app/',
+  },
+  {
+    title: 'Game Award',
+    note: 'GSAP · interactive sections',
+    live: 'https://game-award.netlify.app/',
+  },
+  {
+    title: 'Brainwave',
+    note: 'Parallax · UI motion',
+    live: 'https://site-brainwave.netlify.app/',
   },
 ];
 
 export const TimeLineData = [
-  { year: 2022, text: 'Started my journey at IronHack on the Full-Stack Web Development Program', },
-  { year: "05/2023", text: 'Completed the "Frontend Developer Career Path" at Scrimba and started working as a freelance developer', },
-  { year: "11/2023", text: 'I collaborated on two projects within a multidisciplinary group as part of the TechLabs - Digital Shaper Program in Web Development', },
-  { year: 2024, text: 'Completed the "Typescript: Complete Developers Guide at Udemy"', },
+  { year: 2022, text: 'Started the Full-Stack Web Development program at Ironhack' },
+  { year: '05/2023', text: 'Completed Scrimba’s Frontend Developer Career Path and began freelancing' },
+  { year: '11/2023', text: 'Collaborated on two multidisciplinary projects in the TechLabs Digital Shaper Program' },
+  { year: 2024, text: 'Completed TypeScript: The Complete Developer’s Guide on Udemy' },
+  { year: 2025, text: 'Completed AWS SimuLearn: Serverless Developer' },
 ];

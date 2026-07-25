@@ -1,4 +1,5 @@
 import { IoIosArrowDropdown } from 'react-icons/io';
+import Link from 'next/link';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -19,7 +20,18 @@ export const Container = styled.div`
 `;
 
 export const Span = styled.span`
-  font-style:
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    font-size: 1.6rem;
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: 1.4rem;
+  }
 `;
 
 export const Div1 = styled.div`
@@ -51,8 +63,8 @@ export const Div3 = styled.div`
 `;
 
 // Navigation Links
-export const NavLink = styled.a`
-  font-size: 2rem;
+export const NavLink = styled(Link)`
+  font-size: 1.8rem;
   line-height: 32px;
   color: rgba(255, 255, 255, 0.75);
   transition: 0.4s ease;
@@ -61,7 +73,11 @@ export const NavLink = styled.a`
     opacity: 1;
     cursor: pointer;
   }
+  @media ${(props) => props.theme.breakpoints.md} {
+    font-size: 1.5rem;
+  }
   @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: 1.4rem;
     padding: 0.5rem;
   }
 `;

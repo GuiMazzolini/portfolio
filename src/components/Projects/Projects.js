@@ -1,41 +1,112 @@
 import React from 'react';
 
-import { BlogCard, CardInfo, ExternalLinks, GridContainer, HeaderThree, Hr, Tag, TagList, TitleContent, UtilityList, Img } from './ProjectsStyles';
+import {
+  Content,
+  Description,
+  Img,
+  Label,
+  Links,
+  Media,
+  MediaStatic,
+  MotionHeader,
+  MotionIntro,
+  MotionItem,
+  MotionLink,
+  MotionList,
+  MotionName,
+  MotionNote,
+  MotionStrip,
+  MotionTitle,
+  PrimaryLink,
+  ProjectRow,
+  ProjectsList,
+  SecondaryLink,
+  Status,
+  Tag,
+  TagList,
+  Title,
+} from './ProjectsStyles';
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
-import { projects } from '../../constants/constants';
+import { motionExperiments, projects } from '../../constants/constants';
 
 const Projects = () => (
-  <Section nopadding id="projects">
+  <Section id="projects">
     <SectionDivider />
     <SectionTitle main>Projects</SectionTitle>
-    <GridContainer>
-      {projects.map((p, i) => {
+    <ProjectsList>
+      {projects.map((project, index) => {
+        const MediaWrap = project.live ? Media : MediaStatic;
+        const mediaProps = project.live
+          ? {
+              href: project.live,
+              target: '_blank',
+              rel: 'noopener noreferrer',
+            }
+          : {};
+
         return (
-          <BlogCard key={i}>
-          <Img src={p.image} />
-            <TitleContent>
-              <HeaderThree title>{p.title}</HeaderThree>
-              <Hr />
-            </TitleContent>
-            <CardInfo className="card-info">{p.description}</CardInfo>
-            <div>
-              <TitleContent >Stack</TitleContent>
+          <ProjectRow key={project.id} $reverse={index % 2 === 1}>
+            <MediaWrap {...mediaProps}>
+              <Img src={project.image} alt={project.title} />
+            </MediaWrap>
+            <Content>
+              <Label>{project.label}</Label>
+              <Title>{project.title}</Title>
+              <Description>{project.description}</Description>
               <TagList>
-                {p.tags.map((t, i) => {
-                  return <Tag key={i}>{t}</Tag>;
-                })}
+                {project.tags.map((tag) => (
+                  <Tag key={tag}>{tag}</Tag>
+                ))}
               </TagList>
-            </div>
-            <UtilityList>
-              <ExternalLinks href={p.visit} target="_blanck">{p.visit2 ? "Client" : "Code"}</ExternalLinks>
-              {p.visit2 && <ExternalLinks href={p.visit2} target="_blanck">Server</ExternalLinks>}
-              {p.source && <ExternalLinks href={p.source} target="_blanck">Website</ExternalLinks>}
-              
-            </UtilityList>
-          </BlogCard>
+              <Links>
+                {project.live && (
+                  <PrimaryLink
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Live site
+                  </PrimaryLink>
+                )}
+                {project.code && (
+                  <SecondaryLink
+                    href={project.code}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Code
+                  </SecondaryLink>
+                )}
+                {!project.live && <Status>In progress</Status>}
+              </Links>
+            </Content>
+          </ProjectRow>
         );
       })}
-    </GridContainer>
+    </ProjectsList>
+
+    <MotionStrip>
+      <MotionHeader>
+        <MotionTitle>Motion experiments</MotionTitle>
+        <MotionIntro>
+          Landing-page studies focused on GSAP, scroll storytelling, and UI motion.
+        </MotionIntro>
+      </MotionHeader>
+      <MotionList>
+        {motionExperiments.map((item) => (
+          <MotionItem key={item.title}>
+            <MotionLink
+              href={item.live}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <MotionName>{item.title}</MotionName>
+              <MotionNote>{item.note}</MotionNote>
+            </MotionLink>
+          </MotionItem>
+        ))}
+      </MotionList>
+    </MotionStrip>
   </Section>
 );
 

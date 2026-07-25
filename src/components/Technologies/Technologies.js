@@ -1,54 +1,53 @@
 import React from 'react';
-import { DiFirebase, DiReact, DiZend } from 'react-icons/di';
-import { Section, SectionDivider, SectionText, SectionTitle } from '../../styles/GlobalComponents';
-import { List, ListContainer, ListItem, ListParagraph, ListTitle } from './TechnologiesStyles';
 
-const Technologies = () =>  (
+import { Section, SectionDivider, SectionText, SectionTitle } from '../../styles/GlobalComponents';
+import {
+  Group,
+  GroupTitle,
+  Skill,
+  SkillList,
+  TechGrid,
+} from './TechnologiesStyles';
+
+const techGroups = [
+  {
+    title: 'Front-end',
+    skills: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'Tailwind CSS'],
+  },
+  {
+    title: 'Back-end & data',
+    skills: ['Node.js', 'Express', 'REST APIs', 'MongoDB', 'Stripe', 'AWS / Serverless'],
+  },
+  {
+    title: 'Motion & product',
+    skills: ['GSAP', 'OAuth', 'Vercel', 'Netlify'],
+  },
+  {
+    title: 'Tools',
+    skills: ['Git', 'Cursor / AI-assisted development'],
+  },
+];
+
+const Technologies = () => (
   <Section id="tech">
     <SectionDivider divider />
     <SectionTitle>Technologies</SectionTitle>
     <SectionText>
-      I've worked with a range a technologies in the web development world.
-      From Back-end To Design:
+      Stack I use to ship client sites and full-stack products — including AI
+      coding tools to move faster, with full ownership of the final result.
     </SectionText>
-    <List>
-      <ListItem>
-        <picture>
-          <DiReact size="3rem" />
-        </picture>
-        <ListContainer>
-          <ListTitle>Front-End</ListTitle>
-          <ListParagraph>
-            Experiece with <br />
-            HTML, CSS, React.js, Bootstrap, Tailwind, Javascript and Typescript
-          </ListParagraph>
-        </ListContainer>
-      </ListItem>
-      <ListItem>
-        <picture>
-          <DiFirebase size="3rem" />
-        </picture>
-        <ListContainer>
-          <ListTitle>Back-End</ListTitle>
-          <ListParagraph>
-            Experience with <br />
-            Node.js, Express.js, Restful API, MongoDB, Firebase and Cloudinary
-          </ListParagraph>
-        </ListContainer>
-      </ListItem>
-      {/* <ListItem>
-        <picture>
-          <DiZend size="3rem" />
-        </picture>
-        <ListContainer>
-          <ListTitle>UI/UX</ListTitle>
-          <ListParagraph>
-            Experience with <br />
-            tools like Figma
-          </ListParagraph>
-        </ListContainer>
-      </ListItem> */}
-    </List>
+    <TechGrid>
+      {techGroups.map((group) => (
+        <Group key={group.title}>
+          <GroupTitle>{group.title}</GroupTitle>
+          <SkillList>
+            {group.skills.map((skill) => (
+              <Skill key={skill}>{skill}</Skill>
+            ))}
+          </SkillList>
+        </Group>
+      ))}
+    </TechGrid>
     <SectionDivider colorAlt />
   </Section>
 );

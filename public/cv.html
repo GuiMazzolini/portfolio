@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Guilherme Mazzolini — CV</title>
+  <style>
+    :root {
+      --ink: #0b1220;
+      --muted: #4a5568;
+      --line: #d8dee8;
+      --accent: #1f7a72;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: #fff;
+      font-size: 10.5pt;
+      line-height: 1.45;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      padding: 12mm 14mm 10mm;
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 2.5px solid var(--accent);
+      padding-bottom: 8px;
+      margin-bottom: 11px;
+    }
+
+    h1 {
+      font-size: 22pt;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 2px;
+    }
+
+    .role {
+      font-size: 10.5pt;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2px 12px;
+      font-size: 9pt;
+      color: var(--muted);
+    }
+
+    .contact a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    section {
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 9pt;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 2px;
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+
+    .profile {
+      color: #243044;
+      font-size: 9.5pt;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: 78px 1fr;
+      gap: 2px 10px;
+      font-size: 9.5pt;
+    }
+
+    .skills dt {
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .skills dd {
+      color: #243044;
+    }
+
+    .job {
+      margin-bottom: 7px;
+    }
+
+    .job-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 1px;
+    }
+
+    .job-title {
+      font-weight: 700;
+      font-size: 10pt;
+    }
+
+    .job-meta {
+      color: var(--muted);
+      font-size: 9pt;
+      white-space: nowrap;
+    }
+
+    .job-sub {
+      color: var(--muted);
+      font-size: 9pt;
+      margin-bottom: 3px;
+    }
+
+    ul {
+      padding-left: 15px;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 2px;
+      color: #243044;
+      font-size: 9.5pt;
+    }
+
+    .project {
+      margin-bottom: 6px;
+    }
+
+    .project-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 2px;
+    }
+
+    .project-title {
+      font-weight: 700;
+    }
+
+    .project-tag {
+      font-size: 9pt;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .project-links {
+      font-size: 9pt;
+      color: var(--muted);
+      margin-bottom: 2px;
+    }
+
+    .project-links a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .edu-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 4px;
+    }
+
+    .edu-item span:last-child {
+      color: var(--muted);
+      white-space: nowrap;
+      font-size: 9.5pt;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Guilherme Mazzolini</h1>
+      <p class="role">Full-stack Developer · Berlin</p>
+      <div class="contact">
+        <a href="mailto:guilhermemazzolini@hotmail.com">guilhermemazzolini@hotmail.com</a>
+        <span>linkedin.com/in/guilhermemazzolini</span>
+        <span>github.com/GuiMazzolini</span>
+      </div>
+    </header>
+
+    <section>
+      <h2>Profile</h2>
+      <p class="profile">
+        Full-stack developer building clean, responsive web apps — from client marketing sites
+        to full-stack products. Background in Environmental Engineering; now focused on shipping
+        practical solutions for real users. Comfortable with AI coding tools (Cursor) to move
+        faster, with full ownership of architecture, UX, and the final code.
+      </p>
+    </section>
+
+    <section>
+      <h2>Technical Skills</h2>
+      <dl class="skills">
+        <dt>Front-end</dt>
+        <dd>React, Next.js, TypeScript, JavaScript, Tailwind CSS, GSAP, responsive UI</dd>
+        <dt>Back-end</dt>
+        <dd>Node.js, Express, REST APIs, MongoDB, Stripe, OAuth, AWS / Serverless</dd>
+        <dt>Tools</dt>
+        <dd>Git, Vercel, Netlify, Cursor / AI-assisted development</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+
+      <div class="job">
+        <div class="job-head">
+          <div class="job-title">Freelance Full-Stack Developer</div>
+          <div class="job-meta">Feb 2023 – Present</div>
+        </div>
+        <div class="job-sub">Berlin, Germany</div>
+        <ul>
+          <li>Shipped client websites (law firm, photographer portfolio) with conversion-focused CTAs and responsive layouts.</li>
+          <li>Built full-stack products end to end with React/Next.js and Node — from requirements to deployment.</li>
+          <li>Used AI-assisted development daily while reviewing and owning all shipped code.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div class="job-title">Environmental Project Coordinator</div>
+          <div class="job-meta">Jul 2019 – Jun 2021</div>
+        </div>
+        <div class="job-sub">Studio Zanskar, São Paulo</div>
+        <ul>
+          <li>Managed client projects end to end with cross-functional teams, timelines, and delivery quality.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Selected Projects</h2>
+
+      <div class="project">
+        <div class="project-head">
+          <div class="project-title">Sanches &amp; Muniz — Law firm website</div>
+          <div class="project-tag">Client</div>
+        </div>
+        <div class="project-links"><a href="https://sanchesemuniz.com/">sanchesemuniz.com</a> · Next.js, React · Practice areas, team, consultation/WhatsApp CTAs</div>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <div class="project-title">Rafael Hennig — Photographer portfolio</div>
+          <div class="project-tag">Client</div>
+        </div>
+        <div class="project-links"><a href="https://rafael-hennig.vercel.app/">rafael-hennig.vercel.app</a> · Next.js, React, Vercel · Gallery-first layout for a Berlin photographer</div>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <div class="project-title">MealPlan — Recipes &amp; meal planning</div>
+          <div class="project-tag">Personal</div>
+        </div>
+        <div class="project-links"><a href="https://plan-project.netlify.app/">plan-project.netlify.app</a> · React, Node, MongoDB · Share recipes, plan the week, shopping lists</div>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <div class="project-title">StyleShop — E-commerce store</div>
+          <div class="project-tag">Personal</div>
+        </div>
+        <div class="project-links">Next.js, Stripe, OAuth · Catalog, cart, checkout &amp; auth (polish in progress)</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education &amp; Learning</h2>
+      <div class="edu-item">
+        <span>AWS SimuLearn: Serverless Developer</span>
+        <span>2025</span>
+      </div>
+      <div class="edu-item">
+        <span>TypeScript: The Complete Developer’s Guide — Udemy</span>
+        <span>2024</span>
+      </div>
+      <div class="edu-item">
+        <span>TechLabs Digital Shaper Program — Web Development</span>
+        <span>2023</span>
+      </div>
+      <div class="edu-item">
+        <span>Scrimba Frontend Developer Career Path</span>
+        <span>2023</span>
+      </div>
+      <div class="edu-item">
+        <span>Full-Stack Web Development Bootcamp — Ironhack</span>
+        <span>2022</span>
+      </div>
+      <div class="edu-item">
+        <span>B.Sc. Environmental &amp; Sanitary Engineering — Universidade Anhembi Morumbi</span>
+        <span>2013–2018</span>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
